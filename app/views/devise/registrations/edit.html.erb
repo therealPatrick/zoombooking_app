@@ -6,6 +6,7 @@
           Profile
         </h1>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}, html: {method: :put, class: "space-y-4 md:space-y-6"}) do |f| %>
+        
           <%= render "devise/shared/error_messages", resource: resource %>
           <div>
             <%= f.label :full_name, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
