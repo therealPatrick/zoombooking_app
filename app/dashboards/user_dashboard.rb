@@ -68,4 +68,8 @@ class UserDashboard < Administrate::BaseDashboard
   # def display_resource(user)
   #   "User ##{user.id}"
   # end
+
+  def display_resource(user)
+    user.full_name
+  end
 end
