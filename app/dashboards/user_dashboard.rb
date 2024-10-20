@@ -9,9 +9,11 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    bookings: Field::HasMany,
     email: Field::String,
     encrypted_password: Field::String,
     full_name: Field::String,
+    stripe_customer_id: Field::String,
     remember_created_at: Field::DateTime,
     reset_password_sent_at: Field::DateTime,
     reset_password_token: Field::String,
@@ -27,8 +29,8 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
     full_name
+    bookings
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -36,13 +38,8 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
     full_name
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    created_at
-    updated_at
+    bookings
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -50,11 +47,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     email
-    encrypted_password
     full_name
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
   ].freeze
 
   # COLLECTION_FILTERS
