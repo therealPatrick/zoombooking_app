@@ -24,6 +24,7 @@ class PagesController < ApplicationController
    def receipt
     @booking = current_user.bookings.where(id: params[:booking_id]).first
 
+
     if !@booking.nil?
       respond_to do |format|
         format.html

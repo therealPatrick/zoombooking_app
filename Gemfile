@@ -50,7 +50,8 @@ gem "devise", github: "heartcombo/devise", branch: "main"
 gem "administrate"
 
 gem "http"
-
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
