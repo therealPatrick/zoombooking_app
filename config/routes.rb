@@ -15,12 +15,10 @@ Rails.application.routes.draw do
   get 'dashboard', to: "pages#dashboard"
   get 'thank_you', to: "pages#thank_you"
   get 'receipt/:booking_id', to: "pages#receipt", as: "receipt_pdf"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'zoom/:meeting_id', to: "pages#zoom", as: "zoom_view"
+  
+  post 'purchase', to: 'pays#purchase'
+  post 'join', to: 'pays#join_free'
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  # Defines the root path route ("/")
-  # root "posts#index"
+  
 end
