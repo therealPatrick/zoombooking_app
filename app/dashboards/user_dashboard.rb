@@ -14,6 +14,7 @@ class UserDashboard < Administrate::BaseDashboard
     encrypted_password: Field::String,
     full_name: Field::String,
     stripe_customer_id: Field::String,
+    stripe_customer_id: Field::String,
     remember_created_at: Field::DateTime,
     reset_password_sent_at: Field::DateTime,
     reset_password_token: Field::String,
@@ -39,6 +40,7 @@ class UserDashboard < Administrate::BaseDashboard
     id
     email
     full_name
+    stripe_customer_id
     bookings
   ].freeze
 
