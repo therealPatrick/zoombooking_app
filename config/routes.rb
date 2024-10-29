@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   
   post 'purchase', to: 'pays#purchase'
   post 'join', to: 'pays#join_free'
-
-  
+  post 'webhook', to: 'pays#webhook'
+ 
 end
